@@ -1,0 +1,18 @@
+{% extends 'tests/base.html' %}
+
+{% block content %}
+{% load static %}
+
+
+      <h3>Upload Test</h3><br>
+
+
+  <form method="POST" enctype="multipart/form-data"> 
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit">
+  </form>
+
+
+
+{% endblock %}
